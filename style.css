@@ -1,0 +1,73 @@
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(25, 25, 25);
+    position: relative;
+}
+
+.titulo {
+    color: white;
+    display: flex;
+    margin: auto;
+}
+
+.pelota {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    left: 10vw;
+    top: -10vh;
+    animation: move 3s ease-in infinite alternate;
+}
+
+.pelota:nth-child(2) {
+    background-color: blueviolet;
+    position: absolute;
+    left: 30vw;
+    top: 0vh;
+    animation: move 4s ease-in infinite alternate;
+}
+
+.pelota:nth-child(3) {
+    background-color:brown;
+    position: absolute;
+    left: 50vw;
+    top: 10vh;
+    animation: move 1.5s ease-in infinite alternate;
+}
+
+.pelota:nth-child(4) {
+    background-color:bisque;
+    position: absolute;
+    left: 70vw;
+    top: 50vh;
+    animation: move 2.5s ease-in infinite alternate;
+}
+
+.pelota:nth-child(5) {
+    background-color:blue;
+    position: absolute;
+    left: 90vw;
+    animation: move 2s ease-in infinite alternate;
+}
+
+.pelota:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    0% {
+
+    }
+
+    95% {
+        border-radius: 50%;
+    }
+    
+    100% {
+        border-radius: 50% 50% 30% 30%;
+        top: calc(100vh - 30px);
+    }
+}
